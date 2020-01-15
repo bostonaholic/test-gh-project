@@ -7,4 +7,12 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
-      - run: sleep 3600 # sleep for 1 hour
+      - run:
+          name: count sheep
+          command: |
+            while [ : ]
+            do
+                date
+                echo "Hostname : $(hostname)"
+                sleep 9m
+            done
